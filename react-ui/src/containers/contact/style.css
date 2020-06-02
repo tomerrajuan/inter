@@ -1,0 +1,91 @@
+
+#contact {
+    width: 100vw;
+    height: auto;
+    margin-bottom: 6vh;
+  }
+  
+  .contact-head {
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100vw;
+  }
+  
+  .contact-head .contact-message {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-bottom: 5px;
+    font-size: 22px;
+    font-weight: 700;
+    margin-left: 5vw;
+  }
+  
+  .contact-list {
+    margin-left: 13vw;
+    width: 45vw;
+    height: 100vh;
+    background-color: #283e4a;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .contact-list-box {
+    -webkit-box-shadow: 1px 1px 10px;
+            box-shadow: 1px 1px 10px;
+    padding: 7px;
+    width: 70%;
+    height: 90%;
+    background-color: white;
+    border-radius: 2px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    overflow: scroll;
+  }
+  
+  .contact-list-item {
+    overflow: scroll;
+    height: 20%;
+    width: 70%;
+    margin: 2vh 2vw;
+    color: #333333;
+    -webkit-box-shadow: 1px 1px 1px;
+            box-shadow: 1px 1px 1px;
+    border-left: 1px solid;
+    border-top: 1px solid;
+    padding: 5px;
+  }
+  
+  .contact-list-item h1 {
+    font-size: 18px;
+  }
+  
+  .contact-list-item p {
+    font-size: 14px;
+  }
+  
+  .contact-list-item h2 a {
+    color: #333333;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  
+  .contact-list-item h2 a:hover {
+    text-shadow: 1px 1px 0px;
+  }

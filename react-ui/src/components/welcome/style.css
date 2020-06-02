@@ -1,0 +1,57 @@
+
+#welcome {
+    background-color: rgba(200, 201, 203, 0.1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100vw;
+  }
+  
+  #welcome .contact-head .contact-message {
+    font-size: 23px;
+  }
+  
+  #welcome #welcome_message {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-image: url("/welcome2.jpg");
+    min-height: 70vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 55vh;
+    width: 100vw;
+    color: white;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-bottom: 5vh;
+  }
+  
+  #welcome #welcome_message h1 {
+    width: 70vw;
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0.85;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    padding: 4vh 3vw;
+  }
+  
+  #logo {
+    opacity: 0.8;
+    display: block;
+    height: 14vh;
+    width: 220px;
+  }
+  
+  #logo img {
+    height: 14vh;
+    width: auto;
+    position: absolute;
+  }

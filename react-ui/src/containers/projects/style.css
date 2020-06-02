@@ -1,0 +1,86 @@
+
+.imageList {
+    margin: 3vh 0 8vh 10vw;
+    width: 80vw;
+    height: auto;
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    background: rgba(51, 51, 51);
+  }
+  
+  .image-in-imageList {
+    margin: 15px;
+    height: 300px;
+    width: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-box-shadow: 1px 1px 4px;
+            box-shadow: 1px 1px 4px;
+  }
+  
+  .image-in-imageList:hover {
+    -webkit-box-shadow: 1px 1px 8px;
+            box-shadow: 2px 2px 8px white;
+  }
+
+.navbar-projects {
+    height: auto;
+    left: 0;
+    position: absolute;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  
+  .navbar-projects a {
+    margin-right: 1vw;
+    font-size: 19px;
+    color: black;
+    letter-spacing: 1px;
+  }
+  
+  .navbar-projects a:hover {
+    text-shadow: 1px 1px 0px;
+  }
+  
+  .contact-head p {
+    position: absolute;
+    top: 10vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    left: 0;
+    width: 100vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  .project-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    font-family: "Nunito";
+  }
+  
