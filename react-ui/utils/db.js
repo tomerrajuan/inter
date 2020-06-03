@@ -17,3 +17,25 @@ exports.addImage = function(url) {
     );
 };
 
+exports.getImages = function() {
+    console.log("selecting all from images");
+    return db.query("SELECT * FROM images ORDER BY created_at DESC LIMIT 9");
+};
+
+exports.getMoreImages = function(lastId) {
+    console.log("last id", lastId);
+    return db.query(
+        `SELECT * FROM images
+        WHERE id < $1
+        ORDER BY created_at DESC LIMIT 9`,
+        [lastId]
+    );
+};
+exports.getFirstImageId = function() {
+    console.log("last id");
+    return db.query(
+        `SELECT id FROM images
+ORDER BY id ASC
+LIMIT 1`
+    );
+};

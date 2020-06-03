@@ -55,7 +55,7 @@ justify-content: center;
   }
   
   .navbar-projects a:hover {
-    text-shadow: 1px 1px 0px;
+    text-shadow: 1px 0px 0px;
   }
   
   .contact-head p {
@@ -83,4 +83,28 @@ justify-content: center;
     margin: 0;
     font-family: "Nunito";
   }
-  
+  .show-more{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vh;
+  }
+  #show-more-button{
+height: 40px;
+width: 100px;
+    border: 2px solid rgba(51, 51, 51);
+    font-size: 12px;
+    outline: none;
+
+  }
+  #show-more-button:hover {
+    border: 3px solid rgba(51, 51, 51);
+    font-size: 13px;
+    /* box-shadow: 1px 1px 1px; */
+  }
+  #show-more-button:active {
+    margin-left: 2px;
+    margin-top: 1px;
+
+    /* box-shadow: 1px 1px 1px; */
+  }

@@ -29,7 +29,7 @@ const diskStorage = multer.diskStorage({
 const uploader = multer({
   storage: diskStorage,
   limits: {
-      fileSize: 8097152
+      fileSize: 8097150
   }
 });
 // Multi-process to utilize all CPU cores.
@@ -77,6 +77,39 @@ if (!isDev && cluster.isMaster) {
 });
 
 
+app.get("/images", (req, res) => {
+  console.log("we are at images");
+
+  db.getImages()
+      .then(results => {
+          let images = results.rows;
+          res.json(images);
+      })
+      .catch(err => {
+          res.json(false);
+          console.log("error at getting a comment: ", err);
+      });
+});
+
+app.get("/moreImages/:id", (req, res) => {
+  console.log("we are at get more images");
+  let id = req.params.id;
+  console.log("id is", id);
+
+  Promise.all([db.getMoreImages(id), db.getFirstImageId()])
+      .then(results => {
+          console.log("results are", results[0].rows);
+          console.log("results 1 are", results[1].rows);
+
+          res.json({
+              image: results[0].rows,
+              firstId: results[1].rows
+          });
+      })
+      .catch(err => {
+          console.log("error at hashedPasswordsend", err);
+      });
+});
 
   app.post('/', function(req, res){
     console.log('test');

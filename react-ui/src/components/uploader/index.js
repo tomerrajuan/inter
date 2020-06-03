@@ -7,9 +7,6 @@ export default class Uploader extends React.Component {
         this.state = {};
     }
 
-    componentDidMount() {
-
-    }
 
     handleChange(e) {
         this.file = e.target.files[0];
@@ -19,8 +16,7 @@ export default class Uploader extends React.Component {
         axios
             .post("/upload", fd)
             .then(function(response) {
-               
-                me.props.changeImage(response.data.image);
+                console.log("upload image is done with id: ", response)
 
             })
             .catch(err => console.log("error in post upload", err));
