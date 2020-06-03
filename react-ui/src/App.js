@@ -4,7 +4,7 @@ import './App.css';
 import Contact from "./containers/contact";
 import Homepage from "./containers/homepage";
 import Projects from "./containers/projects";
-
+import ProjectsMovies from "./containers/projects/projects-movies";
 function App() {
   const [apiResults, setApiResults] = useState("");
 
@@ -22,6 +22,7 @@ function App() {
     <div className="App">
     <Route path="/" exact component={Homepage} />
     <Route path="/projects" exact component={Projects} />
+    <Route path="/projects-movies" exact component={ProjectsMovies} />
     <Route path="/contact" exact component={Contact} />
     </div>
       </BrowserRouter>

@@ -1,7 +1,7 @@
 
 .imageList {
-    margin: 3vh 0 8vh 10vw;
-    width: 80vw;
+    margin: 3vh 0 8vh 15vw;
+    width: 70vw;
     height: auto;
     list-style-type: none;
     display: -webkit-box;
@@ -18,9 +18,9 @@ justify-content: center;
   }
   
   .image-in-imageList {
-    margin: 15px;
-    height: 300px;
-    width: 300px;
+    margin: 12px;
+    height: 385px;
+    width: 250px;
     -o-object-fit: cover;
        object-fit: cover;
     -webkit-box-shadow: 1px 1px 4px;

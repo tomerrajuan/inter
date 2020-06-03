@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 const { s3Url } = require("../config");
 const uidSafe = require("uid-safe");
 const db = require("../react-ui/utils/db");
+const dbMovies = require("../react-ui/utils/db-movies");
 
 const s3 = require("../s3");
 const multer = require("multer");
@@ -76,6 +77,19 @@ if (!isDev && cluster.isMaster) {
         .catch(err => console.log("error at uploading: ", err));
 });
 
+app.post("/uploadMovies", uploader.single(`file`), s3.upload, (req, res) => {
+  console.log("we are at  upload at server", req)
+
+  const url = `${s3Url}${req.file.filename}`;
+  dbMovies.addImage(url)
+      .then(( {rows} ) => {
+          console.log("returning from upload: ",rows)
+          res.json({
+              image: rows[0].url
+          });
+      })
+      .catch(err => console.log("error at uploading: ", err));
+});
 
 app.get("/images", (req, res) => {
   console.log("we are at images");
@@ -97,6 +111,40 @@ app.get("/moreImages/:id", (req, res) => {
   console.log("id is", id);
 
   Promise.all([db.getMoreImages(id), db.getFirstImageId()])
+      .then(results => {
+          console.log("results are", results[0].rows);
+          console.log("results 1 are", results[1].rows);
+
+          res.json({
+              image: results[0].rows,
+              firstId: results[1].rows
+          });
+      })
+      .catch(err => {
+          console.log("error at hashedPasswordsend", err);
+      });
+});
+
+app.get("/movies", (req, res) => {
+  console.log("we are at images");
+
+  dbMovies.getImages()
+      .then(results => {
+          let images = results.rows;
+          res.json(images);
+      })
+      .catch(err => {
+          res.json(false);
+          console.log("error at getting a comment: ", err);
+      });
+});
+
+app.get("/moreMovies/:id", (req, res) => {
+  console.log("we are at get more images");
+  let id = req.params.id;
+  console.log("id is", id);
+
+  Promise.all([dbMovies.getMoreImages(id), dbMovies.getFirstImageId()])
       .then(results => {
           console.log("results are", results[0].rows);
           console.log("results 1 are", results[1].rows);
