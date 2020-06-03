@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 
-export default class UploaderMovies extends React.Component {
+export default class UploaderSeries extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -14,7 +14,7 @@ export default class UploaderMovies extends React.Component {
         var fd = new FormData();
         fd.append("file", this.file);
         axios
-            .post("/upload-movies", fd)
+            .post("/upload-series", fd)
             .then(function(response) {
                 console.log("upload image is done with id: ", response)
 

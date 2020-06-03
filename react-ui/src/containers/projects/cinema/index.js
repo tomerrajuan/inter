@@ -2,46 +2,43 @@ import axios from "axios"
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../../../components/footer'
-import UploaderMovies from '../../../components/uploader/uploaderMovies'
+import Uploader from '../../../components/uploader/uploaderCinema'
 import '../../projects/style.css'
 
 
-export default class ProjectsMovies extends React.Component {
+
+export default class ProjectsCinema extends React.Component {
     constructor(props) {
         super(props);
-        this.getMoreMovies = this.getMoreMovies.bind(this);
+        this.getMoreImages = this.getMoreImages.bind(this);
         this.state = {
-            movies:[],
-            lastMovie: "",
+            images:[],
+            lastImage: "",
             showButton: true
         };
     }
  
-//  const imageList = useState(movies).map((image));
+//  const imageList = useState(images).map((image));
  
 componentDidMount() {
     var me = this;
-
-    axios.get("/movies")
+    axios.get("/images-cinema")
     .then(function(response) {
-        console.log("response from movies is: ", response.data);
-        
+        console.log("response from images is: ", response.data);
         me.setState({
-            movies:response.data
-        })
-        
-    }).catch(err => console.log("err", err));
-        me.setState({
-            something: 'changed'});
+            images:response.data
+        }, console.log("state is updated"));
+    })
+    .catch(err => console.log("err", err));
 }
 
-getMoreMovies(e){
-        var img = this.state.movies;
+getMoreImages(e){
+        var img = this.state.images;
         var me= this
         // console.log("state is: ",me);
-        let lastMovie = img[img.length - 1].id;
-        axios.get("/moreMovies/" + lastMovie).then(function(res) {
-                console.log("response get more movies: ", res);
+        let lastImage = img[img.length - 1].id;
+        axios.get("/moreImages-cinema/" + lastImage).then(function(res) {
+                console.log("response get more images: ", res);
                 me.firstId = res.data.firstId[0].id;
                 img = img.concat(res.data.image);
                 me.lastImage = img[img.length - 1].id;
@@ -54,7 +51,7 @@ getMoreMovies(e){
                     })
                 }
                
-                console.log("me.lastMovie ", me.lastMovie,me.firstId, img, me.state.showButton)
+                console.log("me.lastImage ", me.lastImage,me.firstId, img, me.state.showButton)
 
             })
             .catch(err => console.log("error in post upload", err));
@@ -69,7 +66,7 @@ render() {
             <nav className="navbar">
                 <Link to="/contact">Services</Link>
                 <a href="http://inter-audio.de/">InterAudio</a>
-                <Link to="/projects">Projects</Link>
+                <Link to="/projects-cinema">Projects</Link>
                 <Link to="/">Home</Link>
             </nav>
       </header>
@@ -79,22 +76,22 @@ render() {
             </div>
             <p>Here are some of the many projects we have worked on</p>
             <nav className="navbar-projects">
-                <Link to="/projects">Cinema</Link>
-                <a href="movies.html" id="projects-section">Movies</a>
-                <a href="series.html">Series</a>
-                <a href="animation-theater.html">Animation/Theatrical</a>
-                <a href="animation-tv.html">Animation/TV</a>
+                <Link to="/projects-cinema" id="projects-section">Cinema</Link>
+                <Link to ="/projects-movies">Movies</Link>
+                <Link to ="/projects-series">Series</Link>
+                <Link to ="/projects-animation-cinema">Animation/Cinema</Link>
+                <Link to ="/projects-animation-tv">Animation/Tv</Link>
             </nav>
-            <UploaderMovies/>
+            <Uploader/>
         </div>
               <div className="imageList">
-          
-              {
-    this.state.movies.map((movie, i)=>{
- console.log('test');
- return <li ><img className="image-in-imageList" src={movie.url}/></li>
-      })
-    }
+                {
+                this.state.images.map((image, i)=>{
+             console.log('test');
+             return <li ><img className="image-in-imageList" src={image.url}/></li>
+                  })
+                }
+                
       </div>
       {this.state.showButton &&  
               <div className="show-more">
@@ -109,4 +106,3 @@ render() {
    );
  }
 }
-
