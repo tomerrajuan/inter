@@ -82,14 +82,17 @@ render() {
                 <Link to ="/projects-animation-tv">Animation/Tv</Link>
             </nav>
             <Uploader/>
-        </div>
-              <div className="imageList">
+            {this.state.images.length>0 &&               
+            <div className="imageList">
               {
     this.state.images.map((image, i)=>{
  return <li key={i} data-id={image.id} onClick={() => this.checkImgId(image.id)}><img className="image-in-imageList"  src={image.url} alt="" /></li>
       })
     }
-    </div>
+    </div>}
+
+        </div>
+
       {this.state.showButton &&  
               <div className="show-more">
                 <button id="show-more-button" onClick={this.getMoreImages}>
