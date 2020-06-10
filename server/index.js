@@ -316,6 +316,36 @@ app.get("/moreImages-animation-tv/:id", (req, res) => {
     response.sendFile(path.resolve(__dirname, '../react-ui/public', 'index.html'));
   });
 
+  app.get('/', function(req, res) {
+    res.redirect("/");
+    });
+
+    app.get('/projects-cinema', function(req, res) {
+        res.redirect("/projects-cinema");
+        });
+
+        app.get('/projects-movies', function(req, res) {
+            res.redirect("/projects-movies");
+            });
+
+            app.get('/projects-series', function(req, res) {
+                res.redirect("/projects-series");
+                });
+
+                app.get('/projects-animation-cinema', function(req, res) {
+                    res.redirect("/projects-animation-cinema");
+                    });
+
+                    app.get('/projects-animation-tv', function(req, res) {
+                        res.redirect("/projects-animation-tv");
+                        });
+
+                        app.get('/contact', function(req, res) {
+                            res.redirect("/contact");
+                            });
+
+
+
   app.listen(PORT, function () {
     console.error(`Node ${isDev ? 'dev server' : 'cluster worker '+process.pid}: listening on port ${PORT}`);
   });
