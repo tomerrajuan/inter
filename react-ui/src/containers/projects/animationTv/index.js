@@ -2,7 +2,7 @@ import axios from "axios"
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../../../components/footer'
-import UploaderAnimationTv from '../../../components/uploader/uploaderAnimationTv'
+// import UploaderAnimationTv from '../../../components/uploader/uploaderAnimationTv'
 import '../../projects/style.css'
 
 
@@ -83,7 +83,7 @@ render() {
                 <Link to ="/projects-animation-cinema" >Animation/Cinema</Link>
                 <Link to ="/projects-animation-tv" id="projects-section">Animation/Tv</Link>
             </nav>
-            <UploaderAnimationTv/>
+            {/* <UploaderAnimationTv/> */}
         </div>
         {this.state.animationTv.length>0 &&               
               <div className="imageList">

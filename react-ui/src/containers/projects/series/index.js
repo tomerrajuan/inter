@@ -2,7 +2,7 @@ import axios from "axios"
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../../../components/footer'
-import UploaderSeries from '../../../components/uploader/uploaderSeries'
+// import UploaderSeries from '../../../components/uploader/uploaderSeries'
 import '../../projects/style.css'
 
 export default class ProjectsSeries extends React.Component {
@@ -75,7 +75,7 @@ render() {
                 <Link to ="/projects-animation-cinema">Animation/Cinema</Link>
                 <Link to ="/projects-animation-tv">Animation/Tv</Link>
             </nav>
-            <UploaderSeries/>
+            {/* <UploaderSeries/> */}
         </div>
         {this.state.series.length>0 &&               
 
