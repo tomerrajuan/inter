@@ -1,26 +1,32 @@
 
+#choosefile{
+width: 200px;
+margin-top: 4vh;
+}
+
+
+
 .imageList {
-    margin: 3vh 0 8vh 15vw;
+    margin: 5vh 0 8vh 15vw;
     width: 70vw;
     height: auto;
     list-style-type: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-justify-content: center;
+    justify-content: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
+    -ms-flex-direction: row;
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    background: rgba(51, 51, 51);
   }
   
   .image-in-imageList {
-    margin: 12px;
-    height: 385px;
-    width: 250px;
+    margin: -1px;
+    height: 300px;
+    width: 200px;
     -o-object-fit: cover;
        object-fit: cover;
     -webkit-box-shadow: 1px 1px 4px;
@@ -49,7 +55,7 @@ justify-content: center;
   
   .navbar-projects a {
     margin-right: 1vw;
-    font-size: 19px;
+    font-size: 17px;
     color: black;
     letter-spacing: 1px;
   }

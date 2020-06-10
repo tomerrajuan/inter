@@ -21,15 +21,11 @@ export default class ProjectsMovies extends React.Component {
  
 componentDidMount() {
     var me = this;
-
     axios.get("/images-movies")
     .then(function(response) {
-        console.log("response from movies is: ", response.data);
-        
         me.setState({
             movies:response.data
         })
-        
     }).catch(err => console.log("err", err));
         me.setState({
             something: 'changed'});
@@ -38,14 +34,12 @@ componentDidMount() {
 getMoreMovies(e){
         var img = this.state.movies;
         var me= this
-        // console.log("state is: ",me);
         let lastMovie = img[img.length - 1].id;
         axios.get("/moreImages-movies/" + lastMovie).then(function(res) {
                 console.log("response get more movies: ", res);
                 me.firstId = res.data.firstId[0].id;
                 img = img.concat(res.data.image);
                 me.lastImage = img[img.length - 1].id;
-
                var updatedList = img;
                 if (me.lastImage === me.firstId) {
                     me.setState({
@@ -53,14 +47,13 @@ getMoreMovies(e){
                         showButton:false
                     })
                 }
-               
-                console.log("me.lastMovie ", me.lastMovie,me.firstId, img, me.state.showButton)
-
             })
             .catch(err => console.log("error in post upload", err));
             me.setState({something: 'changed'});
 }
- 
+checkImgId(e){
+    console.log("image id number is",e)
+}
 
 render() {
     return(
@@ -77,7 +70,6 @@ render() {
             <div id="logo">
             <img src="interopa.png" alt=""/>
             </div>
-            <p>Here are some of the many projects we have worked on</p>
             <nav className="navbar-projects">
             <Link to="/projects-cinema">Cinema</Link>
                 <Link to ="/projects-movies"  id="projects-section">Movies</Link>
@@ -88,11 +80,10 @@ render() {
             <UploaderMovies/>
         </div>
               <div className="imageList">
-          
               {
     this.state.movies.map((movie, i)=>{
  console.log('test');
- return <li ><img className="image-in-imageList" src={movie.url}/></li>
+ return <li key={i} data-id={movie.id} onClick={() => this.checkImgId(movie.id)}><img className="image-in-imageList"  src={movie.url} alt="" /></li>
       })
     }
       </div>
@@ -102,11 +93,9 @@ render() {
                         Show More
                 </button>
               </div>
-
                 }
     <Footer/>
   </div>
    );
  }
 }
-

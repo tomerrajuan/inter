@@ -58,7 +58,9 @@ getMoreAnimation(e){
             me.setState({something: 'changed'});
 }
  
-
+checkImgId(e){
+    console.log("image id number is",e)
+}
 render() {
     return(
       <div>
@@ -74,7 +76,6 @@ render() {
             <div id="logo">
             <img src="interopa.png" alt=""/>
             </div>
-            <p>Here are some of the many projects we have worked on</p>
             <nav className="navbar-projects">
                 <Link to="/projects-cinema" >Cinema</Link>
                 <Link to ="/projects-movies">Movies</Link>
@@ -88,7 +89,7 @@ render() {
               {
     this.state.animation.map((anima, i)=>{
  console.log('test');
- return <li ><img className="image-in-imageList" src={anima.url}/></li>
+ return <li key={i} data-id={anima.id} onClick={() => this.checkImgId(anima.id)}><img className="image-in-imageList"  src={anima.url} alt="" /></li>
       })
     }
                 

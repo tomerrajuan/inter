@@ -16,7 +16,7 @@ const Contact = (props) => {
     <nav class="navbar">
     <Link to="/contact">Services</Link>
         <a href="http://inter-audio.de/">InterAudio</a>
-        <Link to="/projects">Projects</Link>
+        <Link to="/projects-cinema">Projects</Link>
         <Link to="/">Home</Link>
     </nav>
 </header>

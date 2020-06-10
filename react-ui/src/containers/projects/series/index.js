@@ -16,19 +16,14 @@ export default class ProjectsSeries extends React.Component {
         };
     }
  
-//  const imageList = useState(series).map((image));
- 
 componentDidMount() {
     var me = this;
-
     axios.get("/images-series")
     .then(function(response) {
         console.log("response from series is: ", response.data);
-        
         me.setState({
             series:response.data
         })
-        
     }).catch(err => console.log("err", err));
         me.setState({
             something: 'changed'});
@@ -37,14 +32,12 @@ componentDidMount() {
 getMoreSeries(e){
         var img = this.state.series;
         var me= this
-        // console.log("state is: ",me);
         let lastSerie = img[img.length - 1].id;
         axios.get("/moreImages-series/" + lastSerie).then(function(res) {
                 console.log("response get more series: ", res);
                 me.firstId = res.data.firstId[0].id;
                 img = img.concat(res.data.image);
                 me.lastImage = img[img.length - 1].id;
-
                var updatedList = img;
                 if (me.lastSerie === me.firstId) {
                     me.setState({
@@ -52,15 +45,14 @@ getMoreSeries(e){
                         showButton:false
                     })
                 }
-               
-                console.log("me.lastSerie ", me.lastSerie,me.firstId, img, me.state.showButton)
-
             })
             .catch(err => console.log("error in post upload", err));
             me.setState({something: 'changed'});
 }
  
-
+checkImgId(e){
+    console.log("image id number is",e)
+}
 render() {
     return(
       <div>
@@ -76,7 +68,6 @@ render() {
             <div id="logo">
             <img src="interopa.png" alt=""/>
             </div>
-            <p>Here are some of the many projects we have worked on</p>
             <nav className="navbar-projects">
             <Link to="/projects-cinema">Cinema</Link>
                 <Link to ="/projects-movies">Movies</Link>
@@ -88,18 +79,17 @@ render() {
         </div>
               <div className="imageList">
               { this.state.series.map((serie, i)=>{
-             console.log('test');
-            return <li ><img className="image-in-imageList" src={serie.url}/></li>
-             })
-            }
+    console.log('test');
+    return <li key={i} data-id={serie.id} onClick={() => this.checkImgId(serie.id)}><img className="image-in-imageList"  src={serie.url} alt="" /></li>
+})
+   }
       </div>
       {this.state.showButton &&  
               <div className="show-more">
-                <button id="show-more-button" onClick={this.getMoreImages}>
+                <button id="show-more-button" onClick={this.getMoreSeries}>
                         Show More
                 </button>
               </div>
-
                 }
     <Footer/>
   </div>

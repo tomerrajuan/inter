@@ -10,7 +10,6 @@ export default class UploaderMovies extends React.Component {
 
     handleChange(e) {
         this.file = e.target.files[0];
-        var me= this;
         var fd = new FormData();
         fd.append("file", this.file);
         axios

@@ -19,7 +19,7 @@ exports.addImage = function(url) {
 
 exports.getImages = function() {
     console.log("selecting all from images");
-    return db.query("SELECT * FROM movies ORDER BY created_at DESC LIMIT 9");
+    return db.query("SELECT * FROM movies ORDER BY created_at DESC LIMIT 12");
 };
 
 exports.getMoreImages = function(lastId) {
@@ -27,7 +27,7 @@ exports.getMoreImages = function(lastId) {
     return db.query(
         `SELECT * FROM movies
         WHERE id < $1
-        ORDER BY created_at DESC LIMIT 9`,
+        ORDER BY created_at DESC LIMIT 12`,
         [lastId]
     );
 };

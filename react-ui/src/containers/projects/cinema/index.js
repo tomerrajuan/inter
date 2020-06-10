@@ -11,15 +11,14 @@ export default class ProjectsCinema extends React.Component {
     constructor(props) {
         super(props);
         this.getMoreImages = this.getMoreImages.bind(this);
+
         this.state = {
             images:[],
             lastImage: "",
             showButton: true
         };
     }
- 
-//  const imageList = useState(images).map((image));
- 
+    
 componentDidMount() {
     var me = this;
     axios.get("/images-cinema")
@@ -32,17 +31,18 @@ componentDidMount() {
     .catch(err => console.log("err", err));
 }
 
+
+
+
 getMoreImages(e){
         var img = this.state.images;
         var me= this
-        // console.log("state is: ",me);
         let lastImage = img[img.length - 1].id;
         axios.get("/moreImages-cinema/" + lastImage).then(function(res) {
                 console.log("response get more images: ", res);
                 me.firstId = res.data.firstId[0].id;
                 img = img.concat(res.data.image);
                 me.lastImage = img[img.length - 1].id;
-
                var updatedList = img;
                 if (me.lastImage === me.firstId) {
                     me.setState({
@@ -50,14 +50,14 @@ getMoreImages(e){
                         showButton:false
                     })
                 }
-               
-                console.log("me.lastImage ", me.lastImage,me.firstId, img, me.state.showButton)
-
             })
             .catch(err => console.log("error in post upload", err));
             me.setState({something: 'changed'});
 }
  
+checkImgId(e){
+    console.log("image id number is",e)
+}
 
 render() {
     return(
@@ -73,8 +73,7 @@ render() {
         <div className="contact-head">
             <div id="logo">
             <img src="interopa.png" alt=""/>
-            </div>
-            <p>Here are some of the many projects we have worked on</p>
+        </div>
             <nav className="navbar-projects">
                 <Link to="/projects-cinema" id="projects-section">Cinema</Link>
                 <Link to ="/projects-movies">Movies</Link>
@@ -85,23 +84,19 @@ render() {
             <Uploader/>
         </div>
               <div className="imageList">
-                {
-                this.state.images.map((image, i)=>{
-             console.log('test');
-             return <li ><img className="image-in-imageList" src={image.url}/></li>
-                  })
-                }
-                
-      </div>
+              {
+    this.state.images.map((image, i)=>{
+ return <li key={i} data-id={image.id} onClick={() => this.checkImgId(image.id)}><img className="image-in-imageList"  src={image.url} alt="" /></li>
+      })
+    }
+    </div>
       {this.state.showButton &&  
               <div className="show-more">
                 <button id="show-more-button" onClick={this.getMoreImages}>
                         Show More
                 </button>
-              </div>
-
-                }
-    <Footer/>
+              </div>}
+        <Footer/>
   </div>
    );
  }

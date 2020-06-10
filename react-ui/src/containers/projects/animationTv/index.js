@@ -57,7 +57,9 @@ getMoreAnimationTv(e){
             .catch(err => console.log("error in post upload", err));
             me.setState({something: 'changed'});
 }
- 
+checkImgId(e){
+    console.log("image id number is",e)
+}
 
 render() {
     return(
@@ -74,7 +76,6 @@ render() {
             <div id="logo">
             <img src="interopa.png" alt=""/>
             </div>
-            <p>Here are some of the many projects we have worked on</p>
             <nav className="navbar-projects">
                 <Link to="/projects-cinema" >Cinema</Link>
                 <Link to ="/projects-movies">Movies</Link>
@@ -88,7 +89,7 @@ render() {
               {
     this.state.animationTv.map((animat, i)=>{
  console.log('test');
- return <li ><img className="image-in-imageList" src={animat.url}/></li>
+ return <li key={i} data-id={animat.id} onClick={() => this.checkImgId(animat.id)}><img className="image-in-imageList"  src={animat.url} alt="" /></li>
       })
     }
                 

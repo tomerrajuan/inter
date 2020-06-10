@@ -1,4 +1,4 @@
-import { default as React, useState } from 'react';
+import { default as React } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import Contact from "./containers/contact";
@@ -12,17 +12,7 @@ import ProjectsSeries from "./containers/projects/series";
 
 
 function App() {
-  const [apiResults, setApiResults] = useState("");
 
-
-// function callAPI() {
-//     fetch("http://localhost:9000/testAPI")
-//         .then(res => res.text())
-//         .then(res => setApiResults(res));
-// }
-
-//    callAPI();
-   
   return (   
      <BrowserRouter>
     <div className="App">
