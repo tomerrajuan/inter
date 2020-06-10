@@ -1,9 +1,14 @@
 const spicedPg = require("spiced-pg");
-const db = spicedPg("postgres:postgres:postgres@localhost:8080/inter");
+const dotenv = require("dotenv")
+dotenv.config()
+const db = spicedPg(process.env.DATABASE_URL);
 const bcrypt = require("bcryptjs");
 const { promisify } = require("util");
 const hash = promisify(bcrypt.hash);
 const genSalt = promisify(bcrypt.genSalt);
+
+
+
 
 exports.hash = password => genSalt().then(salt => hash(password, salt));
 exports.compare = promisify(bcrypt.compare);
