@@ -80,13 +80,12 @@ render() {
                 <Link to="/projects-cinema" >Cinema</Link>
                 <Link to ="/projects-movies">Movies</Link>
                 <Link to ="/projects-series">Series</Link>
-                <Link to ="/projects-animation-cinema" id="projects-section">Animation/Cinema</Link>
-                <Link to ="/projects-animation-tv">Animation/Tv</Link>
+                <Link to ="/projects-animation-cinema" >Animation/Cinema</Link>
+                <Link to ="/projects-animation-tv" id="projects-section">Animation/Tv</Link>
             </nav>
             <UploaderAnimationTv/>
         </div>
         {this.state.animationTv.length>0 &&               
-
               <div className="imageList">
               {
     this.state.animationTv.map((animat, i)=>{
@@ -94,7 +93,6 @@ render() {
  return <li key={i} data-id={animat.id} onClick={() => this.checkImgId(animat.id)}><img className="image-in-imageList"  src={animat.url} alt="" /></li>
       })
     }
-                
       </div>
     }
 

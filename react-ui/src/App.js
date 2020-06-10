@@ -17,11 +17,11 @@ function App() {
      <BrowserRouter>
     <div className="App">
     <Route path="/" exact component={Homepage} />
-    <Route path="/projects-cinema" exact component={ProjectsCinema} />
-    <Route path="/projects-movies" exact component={ProjectsMovies} />
-    <Route path="/projects-series" exact component={ProjectsSeries} />
-    <Route path="/projects-animation" exact component={ProjectsAnimation} />
-    <Route path="/projects-animation-tv" exact component={ProjectsAnimationTv} />
+    <Route path="/projects-cinema" component={ProjectsCinema} />
+    <Route path="/projects-movies" component={ProjectsMovies} />
+    <Route path="/projects-series" component={ProjectsSeries} />
+    <Route path="/projects-animation" component={ProjectsAnimation} />
+    <Route path="/projects-animation-tv" omponent={ProjectsAnimationTv} />
 
 
 
