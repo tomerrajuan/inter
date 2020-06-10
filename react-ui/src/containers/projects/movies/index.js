@@ -79,6 +79,9 @@ render() {
             </nav>
             <UploaderMovies/>
         </div>
+
+        {this.state.movies.length>0 &&               
+
               <div className="imageList">
               {
     this.state.movies.map((movie, i)=>{
@@ -87,6 +90,8 @@ render() {
       })
     }
       </div>
+    }
+
       {this.state.showButton &&  
               <div className="show-more">
                 <button id="show-more-button" onClick={this.getMoreImages}>

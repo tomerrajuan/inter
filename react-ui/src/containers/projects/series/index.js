@@ -77,6 +77,8 @@ render() {
             </nav>
             <UploaderSeries/>
         </div>
+        {this.state.series.length>0 &&               
+
               <div className="imageList">
               { this.state.series.map((serie, i)=>{
     console.log('test');
@@ -84,6 +86,8 @@ render() {
 })
    }
       </div>
+   }
+
       {this.state.showButton &&  
               <div className="show-more">
                 <button id="show-more-button" onClick={this.getMoreSeries}>

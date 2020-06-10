@@ -85,6 +85,7 @@ render() {
             </nav>
             <UploaderAnimation/>
         </div>
+        {this.state.animation.length>0 &&               
               <div className="imageList">
               {
     this.state.animation.map((anima, i)=>{
@@ -92,8 +93,9 @@ render() {
  return <li key={i} data-id={anima.id} onClick={() => this.checkImgId(anima.id)}><img className="image-in-imageList"  src={anima.url} alt="" /></li>
       })
     }
-                
       </div>
+    }
+
       {this.state.showButton &&  
               <div className="show-more">
                 <button id="show-more-button" onClick={this.getMoreAnimation}>

@@ -85,6 +85,8 @@ render() {
             </nav>
             <UploaderAnimationTv/>
         </div>
+        {this.state.animationTv.length>0 &&               
+
               <div className="imageList">
               {
     this.state.animationTv.map((animat, i)=>{
@@ -94,6 +96,8 @@ render() {
     }
                 
       </div>
+    }
+
       {this.state.showButton &&  
               <div className="show-more">
                 <button id="show-more-button" onClick={this.getMoreAnimationTv}>
