@@ -20,8 +20,8 @@ function App() {
     <Route path="/projects-cinema" component={ProjectsCinema} />
     <Route path="/projects-movies" component={ProjectsMovies} />
     <Route path="/projects-series" component={ProjectsSeries} />
-    <Route path="/projects-animation" component={ProjectsAnimation} />
-    <Route path="/projects-animation-tv" omponent={ProjectsAnimationTv} />
+    <Route path="/projects-animation-cinema" component={ProjectsAnimation} />
+    <Route path="/projects-animation-tv" component={ProjectsAnimationTv} />
 
 
 

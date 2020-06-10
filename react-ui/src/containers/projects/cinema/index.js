@@ -82,6 +82,8 @@ render() {
                 <Link to ="/projects-animation-tv">Animation/Tv</Link>
             </nav>
             <Uploader/>
+        </div>
+
             {this.state.images.length>0 &&               
             <div className="imageList">
               {
@@ -91,7 +93,6 @@ render() {
     }
     </div>}
 
-        </div>
 
       {this.state.showButton &&  
               <div className="show-more">
