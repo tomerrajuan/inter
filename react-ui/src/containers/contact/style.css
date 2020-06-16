@@ -27,7 +27,7 @@
     -ms-flex-item-align: end;
         align-self: flex-end;
     margin-bottom: 5px;
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 700;
     margin-left: 5vw;
   }
@@ -41,9 +41,9 @@
   }
   
   .contact-list-box {
-
+box-shadow: 1px 1px 2px;
     padding: 7px;
-    width: 40vw;
+    width: 35vw;
     height: 80vh;
     background-color: white;
     border-radius: 2px;
@@ -57,7 +57,7 @@
     -webkit-box-shadow: 1px 1px 1px;
     box-shadow: 1px 1px 1px;
 border: 1px solid;
-    height: 140px;
+    height: 145px;
     width: 400px;
     margin: 2vh 2vw;
     display: flex;
@@ -68,36 +68,38 @@ border: 1px solid;
 
     padding: 5px;
     width: 400px;
-    height: 140px;
+    height: 145px;
   }
 
   #contact-person-img{
-    height: 138px;
+    height: 143px;
     width: 140px;
     object-fit: contain;
+    border-left: 1px solid;
   }
   
-  .contact-list-item h1 {
+  .contact-list-item-info h1 {
     font-size: 18px;
   }
   
-  .contact-list-item p {
+  .contact-list-item-info  p {
     font-size: 14px;
   }
   
-  .contact-list-item h2 a {
+  .contact-list-item-info  h2 a {
     color: #333333;
     font-size: 14px;
     letter-spacing: 1px;
   }
   
-  .contact-list-item h2 a:hover {
-    text-shadow: 1px 1px 0px;
+  .contact-list-item-info  h2 a:hover {
+    text-shadow: 0px 0px 1px;
   }
 
   #address{
     margin-left: 5vw;
     margin-top: 15vh;
+    width: 45vw;
   }
   #address p{
     width: 180px;

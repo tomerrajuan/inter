@@ -2,6 +2,7 @@ import axios from "axios"
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../../../components/footer'
+import Header from "../../../components/header"
 // import UploaderAnimationTv from '../../../components/uploader/uploaderAnimationTv'
 import '../../projects/style.css'
 
@@ -64,14 +65,7 @@ checkImgId(e){
 render() {
     return(
       <div>
-        <header>
-        <nav className="navbar">
-            <Link to="/">Home</Link>
-                <a href="http://inter-audio.de/">InterAudio</a>
-                <Link to="/contact">Contact</Link>
-
-            </nav>
-      </header>
+<Header/>
         <div className="contact-head">
             <div id="logo">
             <img src="interopa.png" alt=""/>

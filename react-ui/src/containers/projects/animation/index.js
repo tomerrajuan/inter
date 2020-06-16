@@ -1,3 +1,4 @@
+import { Health } from "aws-sdk"
 import axios from "axios"
 import React from 'react'
 import { Link } from 'react-router-dom'
@@ -64,14 +65,7 @@ checkImgId(e){
 render() {
     return(
       <div>
-        <header>
-        <nav className="navbar">
-            <Link to="/">Home</Link>
-                <a href="http://inter-audio.de/">InterAudio</a>
-                <Link to="/contact">Contact</Link>
-
-            </nav>
-      </header>
+<Health/>
         <div className="contact-head">
             <div id="logo">
             <img src="interopa.png" alt=""/>

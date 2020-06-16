@@ -11,10 +11,13 @@ const Header = (props) => {
   return(
     <header>
             <nav className="navbar">
+        <Link to="/">Home</Link>
+
         <Link to="/projects-cinema">Projects</Link>
 
-        <a href="http://inter-audio.de/">InterAudio</a>
         <Link to="/contact">Contact</Link>
+        <a id="interaudio" href="http://inter-audio.de/"  target="_blank">InterAudio</a>
+
     </nav>
     </header>
    )

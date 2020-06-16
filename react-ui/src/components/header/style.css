@@ -9,6 +9,14 @@ header {
     align-items: center;
 }
 
+#interaudio{
+ color:#eb4559;
+}
+#interaudio:hover{
+    color:#d7385e;
+   }
+
+
 #menu {
     position: absolute;
     background: white;

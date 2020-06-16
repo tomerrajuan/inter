@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import Footer from '../../components/footer'
+import Header from '../../components/header'
 import Map from '../map'
 import './style.css'
 
@@ -15,14 +15,7 @@ const Contact = (props) => {
 
   return(
     <div>
-    <header>
-    <nav class="navbar">
-    <Link to="/">Home</Link>
-
-        <a href="http://inter-audio.de/">InterAudio</a>
-        <Link to="/projects-cinema">Projects</Link>
-    </nav>
-</header>
+<Header/>
 
     <section id="contact">
         <div class="contact-head">
@@ -38,8 +31,7 @@ const Contact = (props) => {
             <div class="contact-list-box">
                 <div class="contact-list-item">
                     <div class="contact-list-item-info"><h1>INTEROPA FILM GmbH</h1>
-                    <p>Harzer Strasse 39 12059 Berlin Germany
-                    </p>
+                    
                     <p>Phone: +49 (0) 30 68 98 96 0</p>
                     <p>Fax: +49 (0) 30 68 98 96 44</p>
                     <h2> <a href="mailto:info@interopa.de">info@interopa.de</a></h2></div>
@@ -51,8 +43,10 @@ const Contact = (props) => {
                     <p>Thomas Braune</p>
                     <p>+49 (0) 30 68 98 96 31</p>
                     <h2>
+                    <a href="mailto:braune@interopa.de">braune@interopa.de</a>
+
                     </h2>
-                        <a href="mailto:braune@interopa.de">braune@interopa.de</a></div>
+                    </div>
                         <img id="contact-person-img" src="default.jpg"></img>
 
                     
@@ -125,7 +119,7 @@ const Contact = (props) => {
             </div>
             <div id="address">
                  <h1>address: </h1>
-                  <p>INTEROPA FILM GmbH Harzer Str. 39 12059 Berlin, Germany</p>
+                  <p>INTEROPA FILM GmbH Harzer Str. 39, 12059 Berlin, Germany</p>
             <Map/>
             </div>
          
