@@ -74,7 +74,7 @@ border: 1px solid;
   #contact-person-img{
     height: 138px;
     width: 140px;
-    object-fit: cover;
+    object-fit: contain;
   }
   
   .contact-list-item h1 {

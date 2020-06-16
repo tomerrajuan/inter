@@ -43,7 +43,7 @@ const Contact = (props) => {
                     <p>Phone: +49 (0) 30 68 98 96 0</p>
                     <p>Fax: +49 (0) 30 68 98 96 44</p>
                     <h2> <a href="mailto:info@interopa.de">info@interopa.de</a></h2></div>
-                    <img id="contact-person-img" src="default.jpg"></img>
+                    <img id="contact-person-img" src="interopa.png"></img>
                     
                 </div>
                 <div class="contact-list-item">
