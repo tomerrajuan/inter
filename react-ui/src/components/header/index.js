@@ -11,9 +11,9 @@ const Header = (props) => {
   return(
     <header>
             <nav className="navbar">
-        <Link to="/contact">Services</Link>
-        <a href="http://inter-audio.de/">InterAudio</a>
         <Link to="/projects-cinema">Projects</Link>
+
+        <a href="http://inter-audio.de/">InterAudio</a>
         <Link to="/contact">Contact</Link>
     </nav>
     </header>

@@ -59,11 +59,11 @@ render() {
     return(
       <div>
         <header>
-            <nav className="navbar">
-                <Link to="/contact">Services</Link>
+        <nav className="navbar">
+            <Link to="/">Home</Link>
                 <a href="http://inter-audio.de/">InterAudio</a>
-                <Link to="/projects">Projects</Link>
-                <Link to="/">Home</Link>
+                <Link to="/contact">Contact</Link>
+
             </nav>
       </header>
         <div className="contact-head">

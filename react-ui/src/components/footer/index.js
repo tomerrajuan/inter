@@ -15,11 +15,9 @@ const Footer = (props) => {
         <p> Copyright © 2020 INTEROPA FILM GmbH - all rights reserved.</p>
 
     </div>
-    <div className="footer-center">
-        <h1>address: </h1>
-        <p>INTEROPA FILM GmbH Harzer Str. 39 12059 Berlin, Germany</p>
-    </div>
+
     <div className="footer-right">
+      
     </div>
 </footer>
    )

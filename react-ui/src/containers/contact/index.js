@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../../components/footer'
+import Map from '../map'
 import './style.css'
 
 
@@ -10,14 +11,16 @@ import './style.css'
 **/
 
 const Contact = (props) => {
+
+
   return(
     <div>
     <header>
     <nav class="navbar">
-    <Link to="/contact">Services</Link>
+    <Link to="/">Home</Link>
+
         <a href="http://inter-audio.de/">InterAudio</a>
         <Link to="/projects-cinema">Projects</Link>
-        <Link to="/">Home</Link>
     </nav>
 </header>
 
@@ -34,60 +37,99 @@ const Contact = (props) => {
         <div class="contact-list">
             <div class="contact-list-box">
                 <div class="contact-list-item">
-                    <h1>INTEROPA FILM GmbH</h1>
+                    <div class="contact-list-item-info"><h1>INTEROPA FILM GmbH</h1>
                     <p>Harzer Strasse 39 12059 Berlin Germany
                     </p>
                     <p>Phone: +49 (0) 30 68 98 96 0</p>
                     <p>Fax: +49 (0) 30 68 98 96 44</p>
-                    <h2> <a href="mailto:info@interopa.de">info@interopa.de</a></h2>
+                    <h2> <a href="mailto:info@interopa.de">info@interopa.de</a></h2></div>
+                    <img id="contact-person-img" src="default.jpg"></img>
+                    
                 </div>
                 <div class="contact-list-item">
-                    <h1>Managing Director</h1>
+                <div class="contact-list-item-info"><h1>Managing Director</h1>
                     <p>Thomas Braune</p>
                     <p>+49 (0) 30 68 98 96 31</p>
                     <h2>
-                        <a href="mailto:braune@interopa.de">braune@interopa.de</a>
                     </h2>
+                        <a href="mailto:braune@interopa.de">braune@interopa.de</a></div>
+                        <img id="contact-person-img" src="default.jpg"></img>
+
+                    
                 </div>
                 <div class="contact-list-item">
-                    <h1>Head of Production</h1>
+                <div class="contact-list-item-info">                
+                
+                <h1>Head of Production</h1>
                     <p>Philipp Cassau</p>
                     <p>+49 (0) 30 68 98 96 43</p>
                     <h2>
                         <a href="mailto:cassau@interopa.de">cassau@interopa.de</a>
                     </h2>
+                    </div>
+                    <img id="contact-person-img" src="default.jpg"></img>
+
+    
                 </div>
                 <div class="contact-list-item">
-                    <h1>Production Managers</h1>
+                <div class="contact-list-item-info">
+
+                <h1>Production Managers</h1>
                     <p>Olaf Raschdorff</p>
                     <p>+49 (0) 30 68 98 96 21</p>
                     <h2>
                         <a href="mailto:raschdorff@interopa.de">raschdorff@interopa.de</a>
                     </h2>
                 </div>
+                <img id="contact-person-img" src="default.jpg"></img>
+
+                </div>
                 <div class="contact-list-item">
-                    <p>Jina Cho</p>
+                <div class="contact-list-item-info">
+                <p>Jina Cho</p>
                     <p>+49 (0) 30 68 98 96 24</p>
                     <h2>
                         <a href="mailto:cho@interopa.de">cho@interopa.de</a>
                     </h2>
+
+                </div>
+                <img id="contact-person-img" src="default.jpg"></img>
+
+                    
                 </div>
                 <div class="contact-list-item">
-                    <p>Helen Wilke</p>
+                <div class="contact-list-item-info">
+                <p>Helen Wilke</p>
                     <p>+49 (0) 30 68 98 96 52</p>
                     <h2>
                         <a href="mailto:wilke@interopa.de">wilke@interopa.de</a>
                     </h2>
+
+                </div>
+
+                <img id="contact-person-img" src="default.jpg"></img>
+                   
                 </div>
                 <div class="contact-list-item">
-                    <h1>Head of Technical Services & Cutting Dept.</h1>
+                <div class="contact-list-item-info">
+                <h1>Head of Technical Services & Cutting Dept.</h1>
                     <p>Barbara Hasenleder</p>
                     <p>+49 (0) 30 68 98 96 12</p>
                     <h2>
                         <a href="mailto:hasenleder@interopa.de">hasenleder@interopa.de</a>
                     </h2>
                 </div>
+                <img id="contact-person-img" src="default.jpg"></img>
+                    
+                </div>
             </div>
+            <div id="address">
+                 <h1>address: </h1>
+                  <p>INTEROPA FILM GmbH Harzer Str. 39 12059 Berlin, Germany</p>
+            <Map/>
+            </div>
+         
+
         </div>
     </section>
     <Footer/>
