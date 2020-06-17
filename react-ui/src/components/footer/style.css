@@ -2,7 +2,7 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 30vh;
+    height: 210px;
     width: 100vw;
     background: #333333;
   }
@@ -13,7 +13,6 @@ footer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 33%;
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -25,6 +24,8 @@ footer {
   }
   
   .footer-left {
+    width: 20%;
+
     padding: 3vh 5vw;
   }
   
@@ -36,7 +37,7 @@ footer {
   }
   
   .footer-left a:hover {
-    text-shadow: 1px 1px 1px;
+    text-shadow: 1px 0px 0px;
   }
   
   .footer-left p {
@@ -45,22 +46,27 @@ footer {
     width: 15vw;
   }
   
-  .footer-center h1 {
-    color: white;
-    font-size: 20px;
-    margin-bottom: 1vh;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    width: 162px;
+
+  .footer-center {
+    width: 60% ;
   }
-  
-  .footer-center p {
-    color: white;
-    width: 120px;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    width: 162px;
-    font-size: 14px;
-  }
+
+
+  .footer-right {
+color: white;
+width: 20%;
+      }
+  .footer-right h1{
+    align-self: flex-start;
+
+    font-size: 18px;
+    margin-bottom: 3px;
+      }
+      .footer-right p{
+        margin-bottom: 5px;
+        font-size: 13px;
+        width: 140px;
+          }
+          #footer-tel{
+            width: 200px;
+          }

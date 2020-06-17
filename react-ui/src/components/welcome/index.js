@@ -1,12 +1,25 @@
-import React from 'react'
-import './style.css'
-
+import React from 'react';
+import './style.css';
 /**
 * @author
 * @function Welcome
 **/
 
-const Welcome = (props) => {
+const Welcome = (props) => { 
+
+    // const [header, setHeader] = useState(false);
+
+    // useEffect(()=>{
+    //     const moveHeader= setTimeout(() => {
+    //         setHeader(true);
+    //       }, 1000);
+    // }, []);
+   
+ 
+        
+    
+
+      
   return(
       
 
@@ -15,7 +28,7 @@ const Welcome = (props) => {
             <div id="logo">
                 <img src="interopa.png" alt=""/>
             </div>
-            <div className="contact-message">
+                <div className="homepage-header">
                 INTEROPA Film GmbH Synchronisationen
             </div>
         </div>

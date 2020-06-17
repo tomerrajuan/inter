@@ -10,17 +10,14 @@
             flex-direction: column;
     width: 100vw;
   }
-  
-  #welcome .contact-head .contact-message {
-    font-size: 21px;
-  }
+
   
   #welcome #welcome_message {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     background-image: url("/welcome2.jpg");
-    min-height: 70vh;
+    min-height: 75vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -34,7 +31,7 @@
   }
   
   #welcome #welcome_message h1 {
-    width: 70vw;
+    width: 50vw;
     font-size: 32px;
     font-weight: 700;
     opacity: 0.85;
@@ -42,16 +39,20 @@
         align-self: flex-end;
     padding: 4vh 3vw;
   }
-  
-  #logo {
-    opacity: 0.8;
-    display: block;
-    height: 14vh;
-    width: 220px;
-  }
+
   
   #logo img {
     height: 11vh;
     width: auto;
-    position: absolute;
   }
+
+.homepage-header {
+    margin-bottom: 1vh;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    position: relative;
+  }
+

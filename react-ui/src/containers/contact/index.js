@@ -22,12 +22,12 @@ const Contact = (props) => {
             <div id="logo">
                 <img src="interopa.png" alt=""/>
             </div>
-            <div class="contact-message">
-                Feel free to contact us:
-            </div>
         </div>
-
+        <h1 class="contact-header">
+                Feel free to contact us:
+            </h1>
         <div class="contact-list">
+      
             <div class="contact-list-box">
                 <div class="contact-list-item">
                     <div class="contact-list-item-info"><h1>INTEROPA FILM GmbH</h1>
@@ -118,7 +118,7 @@ const Contact = (props) => {
                 </div>
             </div>
             <div id="address">
-                 <h1>address: </h1>
+                 <h1>Address: </h1>
                   <p>INTEROPA FILM GmbH Harzer Str. 39, 12059 Berlin, Germany</p>
             <Map/>
             </div>

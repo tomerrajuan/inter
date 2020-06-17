@@ -1,5 +1,5 @@
 const spicedPg = require("spiced-pg");
-const db = spicedPg("postgres:postgres:postgres@localhost:8080/inter");
+const db = spicedPg(process.env.DATABASE_URL);
 const bcrypt = require("bcryptjs");
 const { promisify } = require("util");
 const hash = promisify(bcrypt.hash);

@@ -82,7 +82,9 @@ render() {
             <div className="imageList">
               {
     this.state.images.map((image, i)=>{
- return <li key={i} data-id={image.id} onClick={() => this.checkImgId(image.id)}><img className="image-in-imageList"  src={image.url} alt="" /></li>
+ return <li key={i} data-id={image.id} onClick={() => this.checkImgId(image.id)}>
+     <img className="image-in-imageList"  src={image.url} alt="" />
+     </li>
       })
     }
     </div>}
