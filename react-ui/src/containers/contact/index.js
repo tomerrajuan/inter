@@ -118,8 +118,10 @@ const Contact = (props) => {
                 </div>
             </div>
             <div id="address">
-                 <h1>Address: </h1>
+                <div id="address-word">
+                <h1>Address: </h1>
                   <p>INTEROPA FILM GmbH Harzer Str. 39, 12059 Berlin, Germany</p>
+                </div>
             <Map/>
             </div>
          

@@ -14,7 +14,7 @@ export default class ProjectsMovies extends React.Component {
         this.state = {
             movies:[],
             lastMovie: "",
-            showButton: true
+            showButton: false
         };
     }
  
@@ -37,6 +37,11 @@ getMoreMovies(e){
         var me= this
         let lastMovie = img[img.length - 1].id;
         axios.get("/moreImages-movies/" + lastMovie).then(function(res) {
+            if(img>=11){
+                me.setState({
+                    showButton:true
+                })
+            }
                 console.log("response get more movies: ", res);
                 me.firstId = res.data.firstId[0].id;
                 img = img.concat(res.data.image);
@@ -62,7 +67,8 @@ render() {
 <Header/>
         <div className="contact-head">
             <div id="logo">
-            <img src="interopa.png" alt=""/>
+            <img id="logo-projects" src="interopa.png" alt=""/>
+
             </div>
             <nav className="navbar-projects">
             <Link to="/projects-cinema">Cinema</Link>

@@ -10,12 +10,12 @@ header {
 }
 
 #interaudio{
-    color: #EC5252;
+    color: #FA7F4B;
+
     font-size: 14px !important;
     margin-top: 2px;
 }
 #interaudio:hover{
-    color: #FA7F4B;
    }
 
 

@@ -68,7 +68,8 @@ render() {
 <Header/>
         <div className="contact-head">
             <div id="logo">
-            <img src="interopa.png" alt=""/>
+            <img id="logo-projects" src="interopa.png" alt=""/>
+
             </div>
             <nav className="navbar-projects">
                 <Link to="/projects-cinema" >Cinema</Link>

@@ -13,7 +13,7 @@ export default class ProjectsSeries extends React.Component {
         this.state = {
             series:[],
             lastSerie: "",
-            showButton: true
+            showButton: false
         };
     }
  
@@ -31,21 +31,38 @@ componentDidMount() {
 }
 
 getMoreSeries(e){
+   
         var img = this.state.series;
+      
         var me= this
         let lastSerie = img[img.length - 1].id;
+
+        if(img<=11){
+            me.setState({
+                showButton:false
+            })
+        }
+
         axios.get("/moreImages-series/" + lastSerie).then(function(res) {
+            
+            if(img>=11){
+                me.setState({
+                    showButton:true
+                })
+            }
+       
                 console.log("response get more series: ", res);
                 me.firstId = res.data.firstId[0].id;
+         
                 img = img.concat(res.data.image);
                 me.lastImage = img[img.length - 1].id;
                var updatedList = img;
-                if (me.lastSerie === me.firstId) {
-                    me.setState({
-                        images: updatedList,
-                        showButton:false
-                    })
-                }
+               if (me.lastSerie === me.firstId) {
+                me.setState({
+                    images: updatedList,
+                    showButton:false
+                })
+            }
             })
             .catch(err => console.log("error in post upload", err));
             me.setState({something: 'changed'});
@@ -60,7 +77,8 @@ render() {
 <Header/>
         <div className="contact-head">
             <div id="logo">
-            <img src="interopa.png" alt=""/>
+            <img id="logo-projects" src="interopa.png" alt=""/>
+
             </div>
             <nav className="navbar-projects">
             <Link to="/projects-cinema">Cinema</Link>

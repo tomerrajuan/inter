@@ -119,3 +119,7 @@ width: 100px;
     text-shadow: 1px 0px 0px;
     font-weight: 700;
   }
+
+  #logo-projects{
+    position: fixed;
+  }

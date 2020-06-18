@@ -40,6 +40,7 @@ getMoreImages(e){
         var me= this
         let lastImage = img[img.length - 1].id;
         axios.get("/moreImages-cinema/" + lastImage).then(function(res) {
+     
                 console.log("response get more images: ", res);
                 me.firstId = res.data.firstId[0].id;
                 img = img.concat(res.data.image);
@@ -66,7 +67,7 @@ render() {
   <Header/>
         <div className="contact-head">
             <div id="logo">
-            <img src="interopa.png" alt=""/>
+            <img id="logo-projects" src="interopa.png" alt=""/>
         </div>
             <nav className="navbar-projects">
                 <Link to="/projects-cinema" id="projects-section">Cinema</Link>

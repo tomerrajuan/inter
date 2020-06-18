@@ -12,7 +12,7 @@
   }
 
   
-  #welcome #welcome_message {
+  /* #welcome #welcome_message {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -28,9 +28,9 @@
     -ms-flex-item-align: end;
         align-self: flex-end;
     margin-bottom: 5vh;
-  }
+  } */
   
-  #welcome #welcome_message h1 {
+  #welcome-message {
     width: 50vw;
     font-size: 32px;
     font-weight: 700;
@@ -38,6 +38,10 @@
     -ms-flex-item-align: end;
         align-self: flex-end;
     padding: 4vh 3vw;
+    position: absolute;
+    margin-top: 50vh;
+    z-index: 100;
+    color: white;
   }
 
   
@@ -47,11 +51,12 @@
   }
 
 .homepage-header {
+  letter-spacing: 0.5px;
     margin-bottom: 1vh;
     -ms-flex-item-align: end;
         align-self: flex-end;
     margin-bottom: 10px;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 700;
     position: relative;
   }

@@ -1,4 +1,5 @@
 import React from 'react';
+import Carousel from '../carousel';
 import './style.css';
 /**
 * @author
@@ -32,11 +33,13 @@ const Welcome = (props) => {
                 INTEROPA Film GmbH Synchronisationen
             </div>
         </div>
-        <div id="welcome_message">
-            <h1>
-                <strong>INTEROPA </strong>Film GmbH is a leading company in the world of <strong>Movies</strong> and <strong>TV</strong> dubbing
-            </h1>
+        <div>
+        <h1 id="welcome-message">
+    <strong>INTEROPA </strong>Film GmbH is a leading company in the world of <strong>Movies</strong> and <strong>TV</strong> dubbing
+        </h1>
+        <Carousel/>
         </div>
+
     </section>
 
    )
