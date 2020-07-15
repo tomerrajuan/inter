@@ -1,91 +1,52 @@
 import React from 'react';
 import "./style.css";
-/**
-* @author
-* @function Carousel
-**/
+
+
 
 const Carousel = (props) => {
 
-    let d = document.getElementsByClassName("dish");
-    let p = document.getElementsByClassName("point");
+    let image = document.getElementsByClassName("image");
+    let point = document.getElementsByClassName("point");
     let current = 0;
     let currentlyTransitioning = false;
     let timer;
-
+    
     timer = setTimeout(moveDishes, 4000);
-    getClickHandler();
-    
-    // for (var i = 0; i < d.length; i++) {
-    //     d[i].addEventListener("click", function(e) {
-    //         clearTimeout(timer);
-    
-    //         for (var i = 0; i < d.length; i++) {
-    //             if (d[i] == e.target) {
-    //                 break;
-    //             }
-    //         }
-    //     });
-    // }
 
-    // first thing to do when the user clicks.
-
-    for (var i = 0; i < p.length; i++) {
-        p[i].addEventListener("click", getClickHandler(i));
-    }
-
-    function getClickHandler(n) {
-        return function() {
-            if (n === current) {
-                return;
-            }
-            if (currentlyTransitioning) {
-                return;
-            }
-            clearTimeout(timer);
-            moveDishes(n);
-        };
-    }
 
     function moveDishes(arg) {
-        for (i = 0; i < d.length; i++) {
-            d[i].addEventListener("transitionend", function(e) {
+
+        console.log('moveDishes is called with arg: ',arg);
+        for (let i = 0; i < image.length; i++) {
+            image[i].addEventListener("transitionend", function(e) {
                 if (e.target.classList.contains("exit")) {
                     e.target.classList.remove("exit");
-    
                     timer = setTimeout(moveDishes, 4000);
                     currentlyTransitioning = false;
                 }
-
             });
         }
             currentlyTransitioning = true;
-            d[current].classList.remove("onscreen");
-            p[current].classList.remove("on");
-
-            d[current].classList.add("exit");
-           
-
-            if (typeof arg != "undefined") {
-                current = arg;
-            } else {
+            image[current].classList.remove("onscreen");
+            image[current].classList.add("exit");
+            point[current].classList.remove("on");
+            
                 current++;
-    
-                if (current >= d.length) {
+
+                if (current >= image.length) {
                     current = 0;
                 }
-            }
-        d[current].classList.add("onscreen");
-        p[current].classList.add("on");
+        image[current].classList.add("onscreen");
+        point[current].classList.add("on");
     }
 
 
   return(
-    <div className="food">
-    <img className="dish onscreen" src="welcome2.jpg" alt="food" />
-    <img className="dish" src="studio2.jpg" alt="food" />
-    <img className="dish" src="studio3.jpg" alt="food" />
-    <img className="dish" src="studio4.jpg" alt="food" />
+    <div className="images">
+    <img className="image onscreen" src="welcome2.jpg" alt="" />
+    <img className="image" src="studio2.jpg" alt="" />
+    <img className="image" src="studio3.jpg" alt="" />
+    <img className="image" src="studio4.jpg" alt="" />
      <div className="points">
         <div id="point0" className="point on"></div>
         <div id="point1" className="point"></div>

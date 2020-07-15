@@ -1,123 +1,114 @@
-
 #contact {
-    width: 100vw;
-    height: auto;
-    margin-bottom: 6vh;
-  }
-  #map { 
-    height: 370px; 
-    width: 500px;
-    position: absolute;
+  width: 100vw;
+  height: auto;
+  margin-bottom: 6vh;
 }
-  .contact-head {
-    background-color: white;
-    letter-spacing: 0.5px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 100vw;
-    height: 11vh;
-  }
-  
- .contact-header {
+
+.contact-head {
+  background-color: white;
+  letter-spacing: 0.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100vw;
+  height: 11vh;
+}
+
+.contact-header {
   text-rendering: optimizespeed;
-   color:#333333;
-    margin-bottom: 3vh;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    margin-bottom: 10px;
-    font-size: 17px;
-    font-weight: 700;
-    margin-left: 22vw;
-  }
-  
-  .contact-list {
-    height: auto;
- 
-    display: flex;
-    flex-direction: row;
-        margin-left: 11vw;
-  }
-  
-  .contact-list-box {
-box-shadow: 1px 1px 2px;
-    padding: 7px;
-    width: 35vw;
-    height: 80vh;
-    background-color: white;
-    border-radius: 2px;
-    -ms-flex-wrap: wrap;
-    overflow: scroll;
-    flex-wrap: wrap;
-  }
-  
-  .contact-list-item {
+  color: #333333;
+  margin-bottom: 3vh;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  margin-bottom: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  margin-left: 22vw;
+}
 
-    -webkit-box-shadow: 1px 1px 1px;
-    box-shadow: 1px 1px 1px;
-border: 1px solid;
-    height: 145px;
-    width: 400px;
-    margin: 2vh 2vw;
-    display: flex;
-    flex-direction: row;
-  }
+.contact-list {
+  height: auto;
+  width: 80vw;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: 11vw;
+}
 
-  .contact-list-item-info{
+/* .contact-list-box {
+  box-shadow: 1px 1px 2px;
+  padding: 7px;
+  width: 35vw;
+  height: 80vh;
+  background-color: white;
+  border-radius: 2px;
+  -ms-flex-wrap: wrap;
+  overflow: scroll;
+  flex-wrap: wrap;
+} */
 
-    padding: 7px;
-    width: 400px;
-    height: 145px;
-  }
+.contact-list-item {
+  -webkit-box-shadow: 1px 1px 1px;
+  box-shadow: 1px 1px 1px;
+  border: 1px solid;
+  width: 400px;
+  margin: 2vh 2vw;
+  display: flex;
+  flex-direction: row;
+}
 
-  #contact-person-img{
-    height: 143px;
-    width: 140px;
-    object-fit: contain;
-    border-left: 1px solid;
-  }
-  
-  .contact-list-item-info h1 {
-    font-size: 18px;
-  }
-  
-  .contact-list-item-info  p {
-    font-size: 14px;
-  }
-  
-  .contact-list-item-info  h2 a {
-    color: #333333;
-    font-size: 14px;
-    letter-spacing: 1px;
-  }
-  
-  .contact-list-item-info  h2 a:hover {
-    text-shadow: 0px 0px 1px;
-  }
+.contact-list-item-info {
+  padding: 7px;
+  width: 400px;
+}
 
-  #address{
-    margin-left: 5vw;
-    margin-top: 15vh;
-    width: 45vw;
-  }
-  #address p{
-    width: 200px;
-    margin-bottom: 1vh;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-  }
-  #address h1{
-font-size: 22px;
-  }
+#contact-person-img {
+  height: 143px;
+  width: 140px;
+  object-fit: contain;
+  border: 1px solid;
+}
 
-  #address-word{
-    border: 1px solid;
-    padding: 8px;
-    width: 500px;
-    background: #333333;
-    color: white;
-  }
+.contact-list-item-info h1 {
+  font-size: 18px;
+}
+
+.contact-list-item-info p {
+  font-size: 14px;
+}
+
+.contact-list-item-info h2 a {
+  color: #333333;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.contact-list-item-info h2 a:hover {
+  text-shadow: 0px 0px 1px;
+}
+
+#address {
+  margin-left: 5vw;
+  margin-top: 15vh;
+  width: 45vw;
+}
+#address p {
+  width: 200px;
+  margin-bottom: 1vh;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+#address h1 {
+  font-size: 22px;
+}
+
+#address-word {
+  border: 1px solid;
+  padding: 8px;
+  width: 500px;
+  background: #333333;
+  color: white;
+}

@@ -1,92 +1,94 @@
 header {
-    height: 47px;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    position: sticky;
-    background: rgb(51, 51, 51);
-    z-index: 3;
-    align-items: center;
+  height: 5rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  background-color: #293741;
+
+  z-index: 3;
+  align-items: center;
 }
 
-#interaudio{
-    color: #FA7F4B;
-
-    font-size: 14px !important;
-    margin-top: 2px;
+#interaudio {
+  color: #fa7f4b;
+  font-size: 14px !important;
+  margin-top: 2px;
 }
-#interaudio:hover{
-   }
-
+#interaudio:hover {
+}
 
 #menu {
-    position: absolute;
-    background: white;
-    width: 30vw;
-    height: 82vh;
-    margin-top: 60px;
-    top: 0;
-    right: 0;
-    padding-top: 20px;
-    overflow: hidden;
-    border-radius: 3px;
-    visibility: hidden;
-
+  position: absolute;
+  background: white;
+  width: 30vw;
+  height: 82vh;
+  margin-top: 60px;
+  top: 0;
+  right: 0;
+  padding-top: 20px;
+  overflow: hidden;
+  border-radius: 3px;
+  visibility: hidden;
 }
 #menu li {
-    list-style: none;
-    margin-left: 5vw;
-    margin-bottom: 0.5vh;
+  list-style: none;
+  margin-left: 5vw;
+  margin-bottom: 0.5vh;
 }
 #menu ul {
-    width: 20vw;
-    list-style: none;
-    padding-top: 4vh;
+  width: 20vw;
+  list-style: none;
+  padding-top: 4vh;
 }
 #menu a {
-    text-decoration: none;
-    font-size: 14px;
-    padding-top: 10px;
-    font-weight: 700;
-    font: icon;
+  text-decoration: none;
+  font-size: 14px;
+  padding-top: 10px;
+  font-weight: 700;
+  font: icon;
 }
- #menu.on {
-     visibility: visible;
- }
-
-
-
+#menu.on {
+  visibility: visible;
+}
 
 /* NAVBAR */
 
 .navbar {
-    overflow: hidden;
-    position: sticky;
-    width: 100vw;
-    height: 44px;
-    display: flex;
-    justify-content: center;
-    align-self: center;
+  overflow: hidden;
+  position: sticky;
+  width: 100vw;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-self: end;
 }
 
 .navbar a {
-    text-shadow: 2px 2px 4px #000;
-    float: left;
-    display: block;
-    font-weight: 700;
-    text-align: center;
-    padding: 14px 7px;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 15px;
-    float: right;
-    width: auto;
-    color: #D6D0CD;
-
-    
+  text-shadow: 2px 2px 4px #000;
+  float: left;
+  display: block;
+  font-weight: 700;
+  text-align: center;
+  padding: 14px 7px;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 15px;
+  float: right;
+  width: auto;
+  color: #d6d0cd;
 }
 
 .navbar a:hover {
-    text-shadow: 2px 2px 4px #000;
-    color: white;
+  text-shadow: 2px 2px 4px #000;
+  color: white;
+}
+
+@media screen and (min-width: 280px) and (max-width: 600px) {
+  .navbar a {
+    font-size: 13px;
+  }
+  #interaudio {
+    margin-top: 0;
+  }
 }
