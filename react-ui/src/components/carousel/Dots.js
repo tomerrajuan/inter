@@ -8,7 +8,9 @@ const Dot = ({ active }) => (
       margin-right: 5px;
       cursor: pointer;
       border-radius: 50%;
-      background: ${active ? "black" : "white"};
+      opacity: 0.7;
+      border: 1px solid rgb(41, 56, 65);
+      background: ${active ? "grey" : "white"};
     `}
   />
 );
