@@ -22,13 +22,13 @@ const Welcome = (props) => {
           <img src="interopa.png" alt="" />
         </div>
         <div className="homepage-header">
-          INTEROPA Film GmbH Synchronisationen
+          "name of company" Film GmbH Synchronisationen
         </div>
       </div>
       <div>
         <h1 id="welcome-message">
-          <strong>INTEROPA </strong>Film GmbH is a leading company in the world
-          of <strong>Movies</strong> and <strong>TV</strong> dubbing
+          <strong>"name of company" </strong>Film GmbH is a leading company in
+          the world of <strong>Movies</strong> and <strong>TV</strong> dubbing
         </h1>
         <Slider autoPlay={6} />
       </div>

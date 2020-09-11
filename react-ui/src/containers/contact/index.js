@@ -23,13 +23,13 @@ const Contact = (props) => {
         <div class="contact-list">
           <div class="contact-list-item">
             <div class="contact-list-item-info">
-              <h1>INTEROPA FILM GmbH</h1>
+              <h1>"name of company" FILM GmbH</h1>
 
               <p>Phone: +49 (0) 30 68 98 96 0</p>
               <p>Fax: +49 (0) 30 68 98 96 44</p>
               <h2>
                 {" "}
-                <a href="mailto:info@interopa.de">info@interopa.de</a>
+                <a href="mailto:info@interopa.de">info@nameofcompany.de</a>
               </h2>
             </div>
             <img id="contact-person-img" src="interopa.png"></img>

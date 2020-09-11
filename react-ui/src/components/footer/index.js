@@ -21,7 +21,9 @@ const Footer = (props) => {
         </div>
         <div className="footer-center">
           <h1>Address: </h1>
-          <p>INTEROPA FILM GmbH Harzer Str. 39, 12059 Berlin, Germany</p>
+          <p>
+            "name of company" FILM GmbH Harzer Str. 39, 12059 Berlin, Germany
+          </p>
           <p id="footer-tel">Phone: +49 (0) 30 68 98 96 0</p>
           <p id="footer-tel">Fax: +49 (0) 30 68 98 96 44</p>
         </div>
